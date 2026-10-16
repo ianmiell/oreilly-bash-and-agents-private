@@ -1,6 +1,6 @@
 Make output machine-readable (LLMs are trained on JSON)
 They can also use jq to parse the output
-name the commands and flags in a human way that flags what they do and any destructive actions
+Name the commands and flags in a human way that flags what they do and any destructive actions
 Meaningful exit codes - document them
 Idempotence - LLMs can decide to call commands multiple times
 Avoid commands that depend on cwd - make it put the path in
