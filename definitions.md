@@ -19,10 +19,11 @@ Tools
   eg for a weather tool, tool is defined as:
     ```
     {
-      "name": "weather",
+      "name": "get_weather",
       "description": "Get the current weather",
       "parameters": {
-        "location": {"type": "string"}
+        "location": {"type": "string"},
+        "units": {"type": "string"}
       }
     }
     ```
@@ -41,18 +42,39 @@ Tools
       "conditions": "light rain"
     }
     ```
-  Harness executes and returns json. That JSON is then interpreted by the LLM into a human response.
+  Harness executes and returns json. That JSON goes back to the LLM, which may call another tool, or turn it into a human response.
   Agent tells the LLM through context what tools are available.
   Tools can be internal (to claude) and external (MCP Server)
     internal: https://code.claude.com/docs/en/tools-reference
   'Skill' is an internal tool designed to execute skills where needed.
 
+Agent loop
+  Harness sends context -> LLM replies with text or a tool call -> harness checks permissions and runs the tool -> output is appended to context -> repeat until the LLM answers.
+  Every tool output costs context, which is why agents use `head`, `grep`, `sed -n` etc.
+
+Context window
+  Everything the LLM sees in one call: system prompt, CLAUDE.md, tool definitions, conversation, tool output.
+  /clear empties it, /compact summarises it.
+
 Commands
+  /name - a markdown prompt the user invokes explicitly. See agent_concepts/commands.md
+  Now merged into skills: .claude/commands/x.md and .claude/skills/x/SKILL.md both create /x
 
 Hooks
+  Commands the harness runs on lifecycle events (PreToolUse, PostToolUse, UserPromptSubmit, Stop, SessionStart... 30+ in all).
+  Deterministic - the model doesn't decide whether they run. Event JSON on stdin; exit 2 blocks (where the event can be blocked). See agent_concepts/hooks.md
 
 Plugins
+  Packages of skills, commands, agents, hooks, MCP servers, LSP servers and monitors, shared via marketplaces. See agent_concepts/plugins.md
 
 Skills
+  A folder with SKILL.md (+ optional scripts, references). Name and description are always in context; the body is loaded when the model decides it's relevant, or when invoked as /name. See agent_concepts/skills.md
 
 Subagent
+  A delegated worker with its own prompt, tools and context window - only its summary comes back to the main agent. Defined in ~/.claude/agents or .claude/agents. See agent_concepts/subagent.md
+
+Monitor
+  Built-in tool that runs a command in the background and feeds each output line back to Claude. See agent_concepts/monitors.md
+
+MCP
+  Model Context Protocol - how external tools and data sources are exposed to an agent.

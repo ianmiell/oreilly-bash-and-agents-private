@@ -28,10 +28,20 @@ To clear context since agent loaded:
 /clear
 ```
 
-To reload skills:
+Skills hot-reload - edits to SKILL.md are picked up without restarting. There is no /reload.
+If you create a new top-level skills directory mid-session:
 
-``
-/reload
+```
+/reload-skills
+```
+
+The skill in 1-helloworld-simple has no frontmatter. That still works (name = directory name, description = first line), but a `description:` in frontmatter is what the model matches on, so it makes triggering more reliable:
+
+```
+---
+name: helloworld
+description: Says hello world. Use when the user asks you to say hello.
+---
 ```
 
 Adding scripts:

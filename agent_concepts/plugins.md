@@ -1,7 +1,7 @@
 ### Plugins
 
 - What is a plugin?
-  - Plugins package hooks, skills, agents (?), MCP Servers (tools), LSP Servers (Language Server Protocol), Monitors,
+  - Plugins package hooks, skills, commands, agents, MCP Servers (tools), LSP Servers (Language Server Protocol), Monitors
 
 Plugins have scopes: user, project, local, managed
 
@@ -9,13 +9,25 @@ Plugins give you a namespace for plugin calls, eg /myplugin:hello
 
 #### Creating a plugin
 
-Plugin typically has a README.md. [IS THIS REQUIRED/STANDARD?]
+A README.md is conventional but not required.
 
-TODO show how to create a plugin
+The .claude-plugin folder holds the manifest, .claude-plugin/plugin.json (name, description, version...).
+Components live at the plugin root, next to it:
+
+```
+my-plugin/
+  .claude-plugin/plugin.json
+  skills/hello/SKILL.md
+  agents/reviewer.md
+  hooks/hooks.json
+  .mcp.json
+```
+
 https://code.claude.com/docs/en/plugins#convert-existing-configurations-to-plugins
 
-TODO:
-What is the .claude-plugin folder?
+After changing a plugin's hooks, MCP config or agents: `/reload-plugins`
+
+A marketplace is a repo with .claude-plugin/marketplace.json listing plugins (example below).
 
 
 ##### Add a plugin
