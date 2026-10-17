@@ -6,13 +6,14 @@ Course submission:
   https://docs.google.com/document/d/1puS896JkDgNtpo41cLRjMpq1qkRvRuXhSRl7w-PllPY/edit?tab=t.0
 
 Presentation:
-  https://docs.google.com/presentation/d/1oXzgPDM7NVjt3ePTac_iplPZiemizh4z0pMSqlHmF74
+  https://docs.google.com/presentation/d/1sVAP668qByqLiKG9iO7A7vaBJptvmfqBFF3nFEboh9A
+  https://docs.google.com/presentation/d/1oXzgPDM7NVjt3ePTac_iplPZiemizh4z0pMSqlHmF74 (OLD!)
 
 If you have time left over!
 
 /Users/imiell/git/shell-with-genai-oreilly
 
-## Before course
+## BEFORE RUNNING COURSE
 
 ### Switch off autosuggestions in ~/.zshrc
 
