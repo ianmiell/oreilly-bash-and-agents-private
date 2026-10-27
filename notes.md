@@ -9,28 +9,6 @@ Presentation:
   https://docs.google.com/presentation/d/1sVAP668qByqLiKG9iO7A7vaBJptvmfqBFF3nFEboh9A
   https://docs.google.com/presentation/d/1oXzgPDM7NVjt3ePTac_iplPZiemizh4z0pMSqlHmF74 (OLD!)
 
-If you have time left over!
-
-/Users/imiell/git/shell-with-genai-oreilly
-
-## BEFORE RUNNING COURSE
-
-### Switch off autosuggestions in ~/.zshrc
-
-```
-#plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-plugins=(git zsh-syntax-highlighting)
-#plugins=(git kubectl kube-ps1 minikube zsh-autosuggestions gcloud zsh-syntax-highlighting)
-### fzf and zsh-autocomplete
-#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-#source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-```
-
-
-
-### Getting
-
-
 Fine-tuning permissions interactively:
 
 ```
@@ -66,46 +44,11 @@ Fine-tuning permissions interactively:
   print("added", len(added), "-> total allow rules", len(allow))
 ```
 
-
-
-### Close other apps
-
-### Mute phone
-
 ## LLM Architectures:
     https://medium.com/@damianvtran/the-anatomy-of-a-modern-llm-0347afd72514
     https://magazine.sebastianraschka.com/p/the-big-llm-architecture-comparison
     https://sebastianraschka.com/llm-architecture-gallery/
   Not covered here, but interesting
-
-## Shell and Agents
-The `.claude` folder
-  Where all the claude related stuff is. There's one in your home folder, and in each folder you've spun claude up in.
-  claude sets the ~/.gitignore file to ignore .claude/settings.local.json files, so it doesn't get added to git
-
-Searching
-  grep / rg
-  find / fd
-
-Data preparation:
-  Uses fiddly commands to carry out user demands, eg:
-    sed
-    awk
-
-API calling commands:
-  az
-  aws
-  gcloud
-  Docker
-  kubectl
-  terraform
-  helm
-
-JSON:
-  How AI uses JSON under the hood
-  jq .
-  AI tools often produce fragments: a command, a script, a file, a config, a report, a test run. Shell scripting turns those fragments into repeatable workflows.
-  UNIX principle - building tools together
 
 ## Links:
   https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start

@@ -1,9 +1,4 @@
-Define some terms related to what we are discussing.
-Any terms that confuse people?
-
 #### High Level Concepts
-LLM
-  The 'thing' that takes input (context) and produces output (simple view - internals of LLMs can get much more complex)
 Harness
   Program that manages input and output to an LLM
   It's just a program. The program manages how the LLM is called and what to do with its outputs.

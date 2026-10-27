@@ -2,7 +2,6 @@
 
 https://code.claude.com/docs/en/hooks-guide
 
-
 ### Walkthrough
 Add this to ~/.claude/settings.json
 
