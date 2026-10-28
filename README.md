@@ -16,13 +16,13 @@ Slide numbers refer to the improved draft deck.
 
 | Time | Part | Slides | Demo / activity | Notes file |
 |------|------|--------|-----------------|------------|
-| 0:00-0:10 | Intro: hook, who am I, why shell, poll, outline | 1-6 | Poll: CLI tools | [context_engineering.md](context_engineering.md), [typical_commands.md](typical_commands.md) |
+| 0:00-0:10 | Intro: hook, who am I, why shell, poll, outline | 1-6 | Poll: CLI tools | [typical_commands.md](typical_commands.md) |
 | 0:10-0:30 | I: How agents work | 7-17 | Discussion: exploring a new codebase | [definitions.md](definitions.md), [notes.md](notes.md) |
 | 0:30-0:50 | II: Skills and scripts | 18-21 | Branches `1-helloworld-simple`, `2-helloworld-script`; exercise: create a skill | [agent_concepts/skills.md](agent_concepts/skills.md), [agent_concepts/commands.md](agent_concepts/commands.md) |
 | 0:50-0:55 | Break | 22 | | |
 | 0:55-1:15 | III: Hooks and observability | 23-26 | Branches `3-hook-bash`, `6-hook-subagent`; exercise: log every tool call | [agent_concepts/hooks.md](agent_concepts/hooks.md) |
 | 1:15-1:25 | IV: Command design | 27-29 | Branch `7-command-design` | [command_design.md](command_design.md) |
-| 1:25-1:45 | V: Security | 30-33 | Branches `4-security`, `5-permissions`; exercise: classify the risk | [security.md](security.md) |
+| 1:25-1:45 | V: Security | 30-33 | Branches `4-security`, `5-permissions`; exercise: classify the risk | [PRESENT.md](PRESENT.md) (Security section) |
 | 1:45-1:55 | VI: Extending Claude Code | 34-36 | angry-code-reviewer subagent; `/ok` + `/argh` monitors | [agent_concepts/subagent.md](agent_concepts/subagent.md), [agent_concepts/monitors.md](agent_concepts/monitors.md), [agent_concepts/plugins.md](agent_concepts/plugins.md) |
 | 1:55-2:00 | Takeaways, Q&A | 37-39 | | |
 
