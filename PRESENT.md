@@ -20,6 +20,7 @@
 ### INTRO
 SLIDES 1-6
 - AI uses shell and the command line to quickly inspect things, just like people do
+- start with description of course: how agents use bash, what bash you still need to know (worktrees), what we can learn from agents
 
 ### HOW AGENTS WORK
 SLIDES 7-17
