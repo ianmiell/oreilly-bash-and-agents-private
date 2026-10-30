@@ -264,7 +264,7 @@ permissions`.)
 
 ### BASH COMMANDS
 SLIDE 34
-
+see also `typical_comamnds.md`
 
 
 ## RUNNING SHORT?
